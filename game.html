@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Glide - Jeu</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <!-- HUD -->
+        <div class="hud">
+            <div class="hud-left">
+                <span id="score">Score: 0</span>
+                <span id="distance">Distance: 0m</span>
+            </div>
+            <div class="hud-center">
+                <div id="abilityIndicator" class="ability-indicator">
+                    <span id="abilityName">DASH</span>
+                </div>
+            </div>
+            <div class="hud-right">
+                <button id="pauseBtn" class="hud-btn">⏸ PAUSE</button>
+                <button id="menuBtn" class="hud-btn">MENU</button>
+            </div>
+        </div>
+
+        <!-- Canvas --> 
+        <canvas id="monCanvas" width="1200" height="600"></canvas>
+        <!-- Overlay de pause -->
+        <div id="pauseOverlay" class="overlay hidden">
+            <h2>PAUSE</h2>
+            <button id="resumeBtn" class="overlay-btn">REPRENDRE</button>
+            <button id="restartBtn" class="overlay-btn">RECOMMENCER</button>
+            <button id="quitBtn" class="overlay-btn">QUITTER</button>
+        </div>
+        <!-- Overlay de game over -->
+        <div id="gameOverOverlay" class="overlay hidden">
+            <h2>GAME OVER</h2>
+            <p id="finalScore">Score: 0</p>
+            <button id="retryBtn" class="overlay-btn">RÉESSAYER</button>
+            <button id="quitBtn2" class="overlay-btn">MENU</button>
+        </div>
+    </div>
+
+    <!-- Scripts du jeu -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
